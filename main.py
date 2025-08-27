@@ -433,7 +433,7 @@ ORDER BY p.full_name, quarter;
 '''}
 # Sidebar navigation
 st.sidebar.title("**📋Navigation**")
-page = st.sidebar.radio("**📑Go to:**", ["**Live Matches**","**Play Stats**","**Questions Explorer**", "**Players CRUD**"])
+page = st.sidebar.radio("**📑Go to:**", ["**Live Matches**","**Play Stats**","**Questions Explorer**","**Players CRUD**","**Tools Summarization**"])
 
 
 if page == '**Live Matches**':
@@ -924,3 +924,44 @@ elif page == "**Players CRUD**":
 
 Perfect for learning Python + Database integration + Streamlit forms! 🚀
 """)
+
+elif page=="**Tools Summarization**":
+
+# Page Title
+         st.title("📚 About This Project")
+         st.write("This project is built using modern tools and technologies to provide a seamless cricket dashboard experience.")
+         
+         # Section: Tools & Libraries
+         st.subheader("🛠 Tools & Libraries Used")
+         st.markdown("""
+         - **[Streamlit](https://streamlit.io/)** – For building the interactive web app
+         - **[Python](https://www.python.org/)** – Core programming language
+         - **[Requests](https://docs.python-requests.org/en/master/)** – For making API calls
+         - **[Pandas](https://pandas.pydata.org/)** – Data manipulation and analysis
+         - **[Matplotlib](https://matplotlib.org/)** – For visualizations and charts
+         - **[Cricbuzz API (via RapidAPI)](https://rapidapi.com/)** – Source of real-time cricket data
+         - **[GitHub](https://github.com/)** – Version control and repository hosting
+         """)
+         
+         # Section: Features
+         st.subheader("✨ Features Implemented")
+         st.markdown("""
+         - ✅ **Live Scores** – Get real-time match updates
+         - ✅ **Player Stats** – Search any player and view complete career stats
+         - ✅ **Question Explorer** – Get Insights of each and every page using sql queries
+         - ✅ **CRUD Page** – Create,Write,Update,Delete players
+         """)
+         
+         # Section: Tech Stack Diagram
+         st.subheader("📐 Architecture Overview")
+         st.info("""
+         **Frontend:** Streamlit  
+         **Backend:** Python (API integration using Requests)  
+         **Data Source:** Cricbuzz API (RapidAPI)  
+         **Data Handling:** Pandas  
+         **Visualization:** Matplotlib  
+         """)
+         
+         # Footer
+         st.markdown("---")
+         st.markdown("Made with ❤️ by **Vishal Singla**")
