@@ -53,7 +53,7 @@ HEADERS = {
 
 **Clone the repository:**
 
-git clone https://github.com/your-username/cricbuzz_Streamlit.git
+git clone https://github.com/Vishal376/Cricbuzz_Streamlit.git
 cd cricbuzz-dashboard
 
 
