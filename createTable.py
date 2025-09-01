@@ -78,13 +78,7 @@ cursor.execute('''CREATE TABLE bowling_stats (
     PRIMARY KEY (match_id, player_id)
 );
 ''')
-cursor.execute('''CREATE TABLE fielding_stats (
-    match_id   INT REFERENCES matches(match_id),
-    player_id  INT REFERENCES players(player_id),
-    catches    INT,
-    stumpings  INT,
-    PRIMARY KEY (match_id, player_id)
-);''')
+
 
 cursor.execute('''CREATE TABLE partnerships (
     match_id      INT REFERENCES matches(match_id),
@@ -98,4 +92,5 @@ cursor.execute('''CREATE TABLE partnerships (
 );''')
 
 conn.commit()
+
 conn.close()
