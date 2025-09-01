@@ -411,7 +411,8 @@ ORDER BY total_runs DESC;
 "Time-series Analysis of player performance":'''WITH player_quarters AS (
     SELECT 
         b.player_id,
-        STRFTIME('%Y-Q%q', m.match_date) AS quarter,
+          CAST(STRFTIME('%Y', m.match_date) AS TEXT) || '-Q' ||
+        ((CAST(STRFTIME('%m', m.match_date) AS INTEGER) - 1) / 3 + 1) AS quarter,
         AVG(b.runs) AS avg_runs,
         AVG(b.strike_rate) AS avg_sr,
         COUNT(*) AS matches_played
@@ -965,3 +966,4 @@ elif page=="**Tools Summarization**":
          # Footer
          st.markdown("---")
          st.markdown("Made with ❤️ by **Vishal Singla**")
+
